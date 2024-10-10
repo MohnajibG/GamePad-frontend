@@ -38,53 +38,51 @@ const Login = ({ handleToken }) => {
         setErrorMessage("Veuillez réessayer");
         setIsLoading(false);
       }
+    }
 
-    
-  };
-
-  return (
-    <main className="main-login">
-      <h1>Log In</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          className="inpt-login"
-          type="email"
-          placeholder="E-mail"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          required
-        />
-        <div className="inpt-login-pw ">
+    return (
+      <main className="main-login">
+        <h1>Log In</h1>
+        <form onSubmit={handleSubmit}>
           <input
             className="inpt-login"
-            type={passwordVisible ? "text" : "password"}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Mot de passe"
+            type="email"
+            placeholder="E-mail"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            required
           />
+          <div className="inpt-login-pw ">
+            <input
+              className="inpt-login"
+              type={passwordVisible ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Mot de passe"
+            />
+            <button
+              className="btn-eye"
+              type="button"
+              onClick={togglePasswordVisibility}
+              style={{ border: "none", background: "none", cursor: "pointer" }}
+            >
+              {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
           <button
-            className="btn-eye"
-            type="button"
-            onClick={togglePasswordVisibility}
-            style={{ border: "none", background: "none", cursor: "pointer" }}
+            className="btn-login"
+            type="submit"
+            disabled={isLoading || !email || !password}
           >
-            {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+            {isLoading ? "Connexion..." : "Log In"}
           </button>
-        </div>
-        <button
-          className="btn-login"
-          type="submit"
-          disabled={isLoading || !email || !password}
-        >
-          {isLoading ? "Connexion..." : "Log In"}
-        </button>
-        {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-        <Link to="/signup">
-          <p className="p-login">Tu n'as pas un compte ? Inscris-toi!</p>
-        </Link>
-      </form>
-    </main>
-  );
+          {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+          <Link to="/signup">
+            <p className="p-login">Tu n'as pas un compte ? Inscris-toi!</p>
+          </Link>
+        </form>
+      </main>
+    );
+  };
 };
-
 export default Login;
