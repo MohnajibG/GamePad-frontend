@@ -1,0 +1,95 @@
+.main-signup {
+  background-image: url("../Images/bg-signup.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-weight: bolder;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.inpt-signup,
+.btn-signup {
+  width: 25%;
+  border: none;
+  height: 40px;
+  border-radius: 7px;
+  font-weight: bolder;
+  font-size: 16px;
+  background-color: #0b0b0bba;
+}
+
+.inpt-signup:hover {
+  background-color: #aa63e0c1;
+  color: #070504;
+  direction: none;
+}
+.inpt-login-pw {
+  position: relative;
+}
+
+.btn-eye {
+  position: absolute;
+  left: 300px;
+  bottom: 0px;
+  font-size: 30px;
+}
+.inpt-signup:hover {
+  background-color: #eb6014;
+  color: #070504;
+  direction: none;
+}
+.btn-signup {
+  background-color: black;
+  border: #3b3b3b 1px solid;
+  border-radius: 7px;
+  color: white;
+}
+.btn-signup:hover {
+  background-color: #eb6014;
+  color: black;
+  font-weight: bolder;
+}
+
+.p-signup {
+  color: #eb6014;
+  padding: 30px;
+  text-shadow: 1px 0px 24px rgba(0, 0, 0, 1), 0px -1px 24px rgba(0, 0, 0, 1),
+    5px 4px 21px rgba(0, 0, 0, 1);
+}
+
+/* Layout responsive pour mobile */
+@media (max-width: 768px) {
+  .main-signup {
+    background-image: url("../Images/bg-signup.jpg");
+    width: 100%;
+    font-weight: bolder;
+  }
+
+  .main-signup h1 {
+    color: #0b0b0bdc;
+    text-align: end;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .inpt-signup,
+  .btn-signup {
+    width: auto;
+    border: none;
+    margin: 10px;
+  }
+  .btn-eye {
+    left: 270px;
+    bottom: 10px;
+    color: #f0f0f0;
+  }
+}

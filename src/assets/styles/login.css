@@ -1,0 +1,91 @@
+.main-login {
+  background-image: url("../Images/bg-login.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-weight: bolder;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.inpt-login,
+.btn-login {
+  width: 25%;
+  border: none;
+  height: 40px;
+  border-radius: 7px;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.inpt-login-pw {
+  position: relative;
+}
+
+.btn-eye {
+  position: absolute;
+  left: 340px;
+  bottom: 0px;
+  font-size: 30px;
+}
+
+.inpt-login:hover {
+  background-color: #ac0306;
+  color: #070504;
+  direction: none;
+}
+
+.btn-login {
+  background-color: black;
+  border: #3b3b3b 1px solid;
+  border-radius: 7px;
+  color: white;
+}
+.btn-login:hover {
+  background-color: #ffc53f;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
+
+.p-login {
+  color: #ffc53f;
+  text-decoration: none;
+  padding: 30px;
+  text-shadow: 1px 0px 24px rgba(0, 0, 0, 1), 0px -1px 24px rgba(0, 0, 0, 1),
+    5px 4px 21px rgba(0, 0, 0, 1);
+}
+/* Layout responsive pour mobile */
+@media (max-width: 768px) {
+  .main-login {
+    background-image: url("../Images/bg-login.png");
+    width: 100%;
+    font-weight: bolder;
+  }
+
+  .main-login h1 {
+    color: #ffc53f;
+    text-align: end;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .inpt-login,
+  .btn-login {
+    width: 90%;
+    border: none;
+    margin: 10px;
+  }
+  .btn-eye {
+    left: 270px;
+    bottom: 10px;
+    color: #070504;
+  }
+}
