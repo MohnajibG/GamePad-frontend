@@ -25,7 +25,7 @@ const Home = ({ search, page_size, token }) => {
   const handleAddFavorites = async (gameId) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/favorites",
+        "https://site--gamepade-backend--dnxhn8mdblq5.code.run/favorites",
         { gameId },
         {
           headers: {

@@ -24,7 +24,7 @@ const Signup = ({ handleToken }) => {
 
     try {
       const response = await axios.post(
-        "https://site--game-pad-project--dnxhn8mdblq5.code.run/user/signup",
+        "https://site--gamepade-backend--dnxhn8mdblq5.code.run/user/signup",
         {
           email,
           username,

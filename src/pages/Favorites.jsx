@@ -10,7 +10,7 @@ const Favorites = ({ token }) => {
     const fetchFavorites = async () => {
       try {
         const response = await axios.get(
-          "https://site--game-pad-project--dnxhn8mdblq5.code.run/favorites",
+          "https://site--gamepade-backend--dnxhn8mdblq5.code.run/favorites",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -29,7 +29,7 @@ const Favorites = ({ token }) => {
   const handleRemoveFavorites = async (favoriteId) => {
     try {
       const response = await axios.delete(
-        `https://site--game-pad-project--dnxhn8mdblq5.code.run/favorites/${favoriteId}`,
+        `https://site--gamepade-backend--dnxhn8mdblq5.code.run/favorites/${favoriteId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

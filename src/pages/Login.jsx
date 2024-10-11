@@ -24,7 +24,7 @@ const Login = ({ handleToken }) => {
 
     try {
       const response = await axios.post(
-        "https://site--game-pad-project--dnxhn8mdblq5.code.run/user/login",
+        "https://site--gamepad-backend--dnxhn8mdblq5.code.run/user/login",
         {
           email,
           password,
