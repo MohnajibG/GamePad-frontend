@@ -23,11 +23,14 @@ const Signup = ({ handleToken }) => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3000/user/signup", {
-        email,
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://site--game-pad-project--dnxhn8mdblq5.code.run/user/signup",
+        {
+          email,
+          username,
+          password,
+        }
+      );
       handleToken(response.data.token, response.data.username);
       navigate("/");
     } catch (error) {

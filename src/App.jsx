@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
   Navigate,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -30,6 +29,7 @@ function App() {
   const [username, setUsername] = useState(Cookies.get("username") || null);
   const [search, setSearch] = useState("");
 
+  // Fonction pour gérer le token et le username
   const handleToken = (token, username) => {
     if (token) {
       Cookies.set("token", token, { expires: 30 });
@@ -38,6 +38,7 @@ function App() {
       Cookies.remove("token");
       setToken(null);
     }
+
     if (username) {
       Cookies.set("username", username, { expires: 30 });
       setUsername(username);
@@ -47,6 +48,7 @@ function App() {
     }
   };
 
+  // Hook pour récupérer les infos du token et username si disponibles
   useEffect(() => {
     const savedToken = Cookies.get("token");
     const savedUsername = Cookies.get("username");
