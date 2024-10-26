@@ -1,8 +1,27 @@
-# React + Vite
+# GamePad
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Développement d'une application web permettant aux utilisateurs de rechercher, explorer, et sauvegarder leurs jeux préférés en fonction des plateformes.  
 
-Currently, two official plugins are available:
+**Technologies** : React  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Progression  
+**90%**  
+|███████████████████████████---|
+
+---
+
+## Front-end
+
+### Fonctionnalités
+
+- **Recherche**  
+  Permet aux utilisateurs de rechercher des jeux en fonction des plateformes (Xbox, PlayStation, Nintendo, etc.), offrant une expérience personnalisée.
+
+- **Interface Dynamique et Responsive**  
+  Affichage visuel des jeux avec des icônes de plateformes, pour une navigation intuitive et adaptée à tous les écrans.
+
+- **Favoris**  
+  Option pour ajouter ou supprimer des jeux de la liste de favoris. La liste des favoris est accessible uniquement pour les utilisateurs connectés.
+
+- **Connexion/Inscription**  
+  Système d'authentification pour la création de compte et la connexion, avec gestion de session locale pour un accès sécurisé et personnalisé.
